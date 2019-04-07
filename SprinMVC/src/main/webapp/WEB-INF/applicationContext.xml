@@ -23,21 +23,21 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <mvc:resources mapping="/resources/**" location="/resources/" />
      
     <!-- If you use MySQL Database comment out this bean and let others commented  -->
-    <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/tests" />
+        <property name="url" value="jdbc:mysql://localhost/tests" />
         <property name="username" value="root" />
         <property name="password" value="root" />
-    </bean> -->
+    </bean>
      
     <!-- SQL Server 2012 and 2014 Database drivers and connectivity code -->
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
         <property name="url" value="jdbc:sqlserver://localhost;databaseName=mydb" />
         <property name="username" value="sa" />
         <property name="password" value="abcd@1234" />
     </bean>
- 
+  -->
     <!-- Session Factory Declaration -->
     <bean id="sessionFactory"
         class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
